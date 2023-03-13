@@ -4,11 +4,8 @@ kind: Kustomization
 resources:
 - namespace.yaml
 - namespace-ocm.yaml
-- git-ca-cm.yaml
-- git-channel.yaml
 - rhacm-subscription.yaml
 - rhacm-og.yaml
 - rhacm-cluster-sub-admin-crb.yaml
 - rhacm-cluster-manager-admin-crb.yaml
 - rhacm-mcm.yaml
-- vcenter-moos-red-creds.yaml
