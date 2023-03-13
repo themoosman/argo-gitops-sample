@@ -3,4 +3,5 @@ kind: Kustomization
 
 
 bases:
-- ../../manifests/argo/overlays/local-cluster
+- ../../manifests/argocd/overlays/local-cluster
+- ../../manifests/rhacm/overlays/local-cluster
