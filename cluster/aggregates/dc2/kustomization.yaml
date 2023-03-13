@@ -3,15 +3,15 @@ kind: Kustomization
 
 
 bases:
-- ../../manifests/auth/overlays/ocp4
-- ../../manifests/dns/base
-- ../../manifests/groupsync/base
-- ../../manifests/monitoring/base
-- ../../manifests/namespaces/base
-- ../../manifests/proxy/base
-- ../../manifests/quay/base
-- ../../manifests/rbac/base
-- ../../manifests/registry/overlays/ocp4
-- ../../manifests/rhacs/base
-- ../../manifests/rhosm/base
-- ../../manifests/webterminal/base
+# - ../../manifests/auth/overlays/ocp4
+# - ../../manifests/dns/base
+# - ../../manifests/groupsync/base
+# - ../../manifests/monitoring/base
+# - ../../manifests/namespaces/base
+# - ../../manifests/proxy/base
+# - ../../manifests/quay/base
+# - ../../manifests/rbac/base
+# - ../../manifests/registry/overlays/ocp4
+# - ../../manifests/rhacs/base
+# - ../../manifests/rhosm/base
+# - ../../manifests/webterminal/base
