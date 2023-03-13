@@ -1,0 +1,21 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+
+bases:
+- ../../manifests/auth/overlays/local-cluster
+- ../../manifests/compliance/operator/base
+- ../../manifests/compliance/instance/base
+- ../../manifests/dns/base
+- ../../manifests/groupsync/base
+- ../../manifests/monitoring/base
+- ../../manifests/namespaces/base
+- ../../manifests/proxy/base
+- ../../manifests/quay/base
+- ../../manifests/rbac/base
+- ../../manifests/registry/overlays/local-cluster
+- ../../manifests/rhacm/overlays/local-cluster
+- ../../manifests/rhacs/base
+- ../../manifests/rhosm/base
+- ../../manifests/logging/base
+- ../../manifests/webterminal/base
