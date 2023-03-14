@@ -4,4 +4,4 @@ kind: Kustomization
 
 resources:
 - 99-master-chrony.yaml
-- 99-workers-chrony.yaml
+- 99-worker-chrony.yaml
