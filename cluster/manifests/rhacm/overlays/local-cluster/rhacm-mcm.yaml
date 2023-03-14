@@ -32,4 +32,6 @@ spec:
         name: cluster-proxy-addon
       - enabled: false
         name: cluster-backup
+      - enabled: true	
+        name: app-lifecycle
   separateCertificateManagement: false
