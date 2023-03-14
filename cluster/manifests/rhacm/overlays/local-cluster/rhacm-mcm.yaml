@@ -13,8 +13,6 @@ spec:
   overrides:
     components:
       - enabled: true
-        name: multiclusterhub-repo
-      - enabled: true
         name: search
       - enabled: true
         name: console
