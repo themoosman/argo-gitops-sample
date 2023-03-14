@@ -1,0 +1,102 @@
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: gitops-cluster-role
+  namespace: openshift-gitops
+rules:
+  - verbs:
+      - '*'
+    apiGroups:
+      - ''
+    resources:
+      - secrets
+      - configmaps
+      - resourcequotas
+      - limitranges
+      - services
+      - serviceaccounts
+      - deployments
+      - deploymentconfigs
+  - verbs:
+      - '*'
+    apiGroups:
+      - 'batch'
+    resources:
+      - jobs
+  - verbs:
+      - '*'
+    apiGroups:
+      - redhatcop.redhat.io
+    resources:
+      - '*'
+  - verbs:
+      - '*'
+    apiGroups:
+      - imageregistry.operator.openshift.io
+    resources:
+      - '*'
+  - verbs:
+      - '*'
+    apiGroups:
+      - apps
+    resources:
+      - '*'
+  - verbs:
+      - '*'
+    apiGroups:
+      - policy
+    resources:
+      - podsecuritypolicies
+  - verbs:
+      - '*'
+    apiGroups:
+      - traefik.containo.us
+    resources:
+      - ingressroutes
+  - verbs:
+      - '*'
+    apiGroups:
+      - operator.open-cluster-management.io
+    resources:
+      - multiclusterhubs
+  - verbs:
+      - '*'
+    apiGroups:
+      - apps.open-cluster-management.io
+    resources:
+      - channels
+      - subscription
+      - placementrules
+  - verbs:
+      - '*'
+    apiGroups:
+      - app.k8s.io
+    resources:
+      - applications
+  - verbs:
+      - '*'
+    apiGroups:
+      - policy.open-cluster-management.io
+    resources:
+      - policies
+      - configurationpolicies
+      - placementbindings
+  - verbs:
+      - get
+      - list
+      - patch
+      - update
+      - create
+    apiGroups:
+      - platform.stackrox.io
+    resources:
+      - securedcluster
+      - central
+      - securedclusters
+      - centrals
+  - verbs:
+      - '*'
+    apiGroups:
+      - compliance.openshift.io
+    resources:
+      - scansettings
