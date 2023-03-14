@@ -6,3 +6,5 @@ bases:
 - ../../manifests/argocd/base
 - ../../manifests/rhacm/base
 - ../../manifests/rhacm/overlays/local-cluster
+- ../../manifests/machineconfigs/base
+- ../../manifests/webterminal/base
