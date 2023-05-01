@@ -1,7 +1,7 @@
 # argo-gitops-sample
 
 ## Overview
-A sample GitOps project for OpenShift utilizing Standalone ArgoCD or Argo running on RHACM.
+A sample GitOps project for OpenShift utilizing Standalone ArgoCD or Argo running on RHACM (Red Hat Advanced Cluster Manager).
 
 This repo can be used in two ways.  
 
