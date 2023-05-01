@@ -3,10 +3,13 @@
 ## Overview
 A sample GitOps project for OpenShift utilizing ArgoCD and RHACM.
 
-This report will use ArgoCD running on the RHACM hub cluster.  The Argo instance will have a single application for each managed cluster (e.g., DC1 / DC2) to control configuration.
+This repo can be used in two ways.  
+
+. Argo running on RHACM
+. Argo running on a single cluster without RHACM
 
 
-## Installation
+## Installation - Argo on RHACM
 
 ### Setup RHACM
 
@@ -35,5 +38,24 @@ oc apply -k cluster/manifests/rhacm/overlays/local-cluster
 oc apply -f argo-applications/local-cluster/application.yaml
 ```
 
+## Installation - Standalone Argo
 
-## Removal
+### Setup Argo
+
+```bash
+# Log in to the hub cluster with cluster-admin
+
+# cd to git source location, eg
+# cd ~/git/argo-gitops-sample
+
+# Install OpenShift GitOps Operator
+oc apply -k cluster/manifests/argocd/base
+
+# wait for the Operator to install
+```
+
+### Setup GitOps Application
+
+```bash
+oc apply -f argo-applications/local-cluster/application.yaml
+```
