@@ -6,9 +6,9 @@ A sample GitOps project for OpenShift utilizing ArgoCD and RHACM.
 This repo can be used in two ways.  
 
 1. Argo running on RHACM.  
-* This setup allows a single Argo instance (running on an RHACM hub) to manage multiple cluster.
+  * This setup allows a single Argo instance (running on an RHACM hub) to manage multiple cluster.
 2. Argo running on a single cluster without RHACM (Standalone).  
-* This setup requires an Argo instance on every cluster.
+  * This setup requires an Argo instance on every cluster.
 
 
 ## Installation - Argo on RHACM
