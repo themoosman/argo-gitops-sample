@@ -1,0 +1,10 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: whitelist-cm
+  namespace: ldapsync
+data:
+  whitelist.txt: |   
+    CN=SOME_CLUSTER_ADMIN_GROUP,OU=Groups,OU=Admins,DC=my,DC=org
+
+                              

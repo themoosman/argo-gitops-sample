@@ -1,0 +1,12 @@
+﻿kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: cluster-admin-1
+subjects:
+  - kind: Group
+    apiGroup: rbac.authorization.k8s.io
+    name: SOME_LDAP_GROUP_FOR_CLUSTER_ADMIN
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin

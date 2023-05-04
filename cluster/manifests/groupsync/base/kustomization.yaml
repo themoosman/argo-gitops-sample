@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ldapsync-ns.yaml
+- ldapsync-sa.yaml
+- ldapsync-cr.yaml
+- ldapsync-crb.yaml
+- ldapsync-ca-cm.yaml
+- ldapsync-cron.yaml
+

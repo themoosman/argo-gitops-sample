@@ -1,0 +1,31 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: ldap-group-sync
+  namespace: ldapsync
+data:
+  sync.yaml: |                                 
+    kind: LDAPSyncConfig
+    apiVersion: v1
+    url: ldaps://ldap.my.org:636                  
+    insecure: false
+    bindDN: CN=somesvcaccount,OU=Service Accounts,DC=my,DC=org
+    bindPassword:
+      file: "/etc/secrets/bindPassword"
+    ca: /etc/ldap-ca/ca.crt
+    augmentedActiveDirectory:
+        groupsQuery:
+            baseDN: "DC=my,DC=org"
+            scope: sub
+            derefAliases: never
+            pageSize: 1000
+        groupUIDAttribute: dn 
+        groupNameAttributes: [ cn ] 
+        usersQuery:
+            baseDN: "DC=my,DC=org"
+            scope: sub
+            derefAliases: never
+            filter: (objectclass=person)
+            pageSize: 1000
+        userNameAttributes: [ sAMAccountName ] 
+        groupMembershipAttributes: [ memberOf ]
