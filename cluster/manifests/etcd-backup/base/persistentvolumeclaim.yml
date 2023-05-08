@@ -1,0 +1,15 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: etcd-backup
+  namespace: etcd-infra
+  labels:
+    app: etcd-infra
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: REFERENCE_STORAGE_CLASS
+  volumeMode: Filesystem
