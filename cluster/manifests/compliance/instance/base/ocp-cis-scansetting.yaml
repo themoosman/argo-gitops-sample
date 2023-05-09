@@ -1,0 +1,24 @@
+apiVersion: compliance.openshift.io/v1alpha1
+kind: ScanSetting
+metadata:
+  name: default
+  namespace: openshift-compliance
+rawResultStorage:
+  pvAccessModes:
+  - ReadWriteOnce 
+  rotation: 3 
+  size: 1Gi 
+roles:
+- worker 
+- master 
+scanTolerations: 
+- effect: NoSchedule
+  key: node-role.kubernetes.io/master
+  operator: Exists
+- effect: NoSchedule
+  key: infra
+  value: reserved
+- effect: NoExecute
+  key: infra
+  value: reserved
+schedule: 0 1 * * *
